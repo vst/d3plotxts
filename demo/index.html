@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <title>Demo for d3plotxts</title>
+    <link rel="stylesheet" href="../src/d3plotxts.css">
+  </head>
+  <body>
+    <h1>Demo for d3plotxts</h1>
+
+    <div id="chart"></div>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.2/d3.min.js"></script>
+    <script src="../src/jquery.d3plotxts.js"></script>
+    <script src="script.js">
+        // Declare the chart instance:
+        var chart = null;
+
+        // Display:
+        $(document).ready(function () {
+            $.getJSON("data.json", function (data) {
+                chart = $("#chart").d3plotxts({
+                    data: data,
+                    width: 800,
+                    colors: function (name) {
+                        var colors = new Object;
+                        colors["Series A"] = "black";
+                        colors["Series B"] = "red";
+                        colors["Series C"] = "blue";
+                        colors["Series Z"] = "#" + ((1 << 24) * Math.random() | 0).toString(16);
+                        return colors[name];
+                    },
+                    widths: function (name) {
+                        if (name == "Series Z") {
+                            return 3;
+                        }
+                        return 1;
+                    }
+                });
+            });
+        });
+    </script>
+  </body>
+</html>

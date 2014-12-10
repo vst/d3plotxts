@@ -1,0 +1,21 @@
+{
+    "name": "d3plotxts",
+    "version": "0.0.0",
+    "main": "d3plotxts.js",
+    "ignore": [
+        "**/.*",
+        "CONTRIBUTING.md",
+        "Gruntfile.js",
+        "bower_components",
+        "bower_components",
+        "component.json",
+        "composer.json",
+        "ender.js",
+        "node_modules",
+        "package.js",
+        "package.json",
+        "tasks",
+        "test",
+        "tests"
+    ]
+}

@@ -1,0 +1,35 @@
+{
+  "name": "d3plotxts",
+  "title": "Plot Multiple Time Series",
+  "description": "A d3-based Javascript library to plot multiple time series data",
+  "author": {
+    "name": "Vehbi Sinan Tunaligolu",
+    "email": "vst@vsthost.com",
+    "url": "http://www.vsthost.com"
+  },
+  "homepage": "https://bitbucket.org/vehbisinan/d3plotxts",
+  "version": "0.0.0",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/MIT"
+    }
+  ],
+  "scripts": {
+    "test": "grunt travis --verbose"
+  },
+  "dependencies": {
+    "jquery": ">=1.4",
+    "d3": "~3.4.13"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-cli": "~0.1.7",
+    "grunt-contrib-coffee": "~0.7.0",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-copy": "^0.7.0",
+    "grunt-contrib-cssmin": "^0.10.0",
+    "grunt-contrib-jshint": "~0.4.3",
+    "grunt-contrib-uglify": "~0.2.0"
+  }
+}

@@ -1,0 +1,25 @@
+.axis text, .origintext {
+  font: 10px sans-serif;
+}
+
+.axis path, .axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.line {
+  fill: none;
+  stroke: black;
+  stroke-width: 1px;
+}
+
+.series .line {
+    cursor: pointer;
+    cursor: hand;
+}
+
+.series .line:hover {
+    stroke-width: 4px;
+    color: black;
+}
