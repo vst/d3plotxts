@@ -1,6 +1,6 @@
 {
     "name": "d3plotxts",
-    "version": "0.0.0",
+    "version": "0.0.1dev",
     "main": "d3plotxts.js",
     "ignore": [
         "**/.*",

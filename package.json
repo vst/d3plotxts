@@ -8,7 +8,7 @@
     "url": "http://www.vsthost.com"
   },
   "homepage": "https://bitbucket.org/vehbisinan/d3plotxts",
-  "version": "0.0.0",
+  "version": "0.0.1dev",
   "licenses": [
     {
       "type": "MIT",
