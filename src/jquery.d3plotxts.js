@@ -85,6 +85,9 @@
                 .axis()
                 .scale(xScale)
                 .tickFormat(settings.xAxisFormat)
+                .innerTickSize(-plotHeight)
+                .outerTickSize(0)
+                .tickPadding(10)
                 .orient("bottom");
 
             // Prepare the `y` axis:
@@ -93,6 +96,9 @@
                 .axis()
                 .scale(yScale)
                 .tickFormat(settings.yAxisFormat)
+                .innerTickSize(-plotWidth)
+                .outerTickSize(0)
+                .tickPadding(10)
                 .orient("left");
 
             // Prepare the line drawer:

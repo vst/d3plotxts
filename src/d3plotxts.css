@@ -23,3 +23,7 @@
     stroke-width: 4px;
     color: black;
 }
+
+.tick line{
+    opacity: 0.1;
+}
