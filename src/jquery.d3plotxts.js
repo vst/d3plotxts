@@ -11,6 +11,19 @@
         width: 400,
         height: 400,
         datetimeFormat: "%Y-%m-%d",
+        xAxisFormat: d3.time.format.multi([
+            [".%L", function(d) { return d.getMilliseconds(); }],
+            [":%S", function(d) { return d.getSeconds(); }],
+            ["%I:%M", function(d) { return d.getMinutes(); }],
+            ["%I %p", function(d) { return d.getHours(); }],
+            ["%a %d", function(d) { return d.getDay() && d.getDate() !== 1; }],
+            ["%b %d", function(d) { return d.getDate() !== 1; }],
+            ["%B", function(d) { return d.getMonth(); }],
+            ["%Y", function() { return true; }]
+        ]),
+        yAxisFormat: function (value) {
+            return value;
+        },
         colors: function () {
             return "#" + ((1 << 24) * Math.random() | 0).toString(16);
         },
@@ -71,6 +84,10 @@
                 .svg
                 .axis()
                 .scale(xScale)
+                .tickFormat(settings.xAxisFormat)
+                .innerTickSize(-plotHeight)
+                .outerTickSize(0)
+                .tickPadding(10)
                 .orient("bottom");
 
             // Prepare the `y` axis:
@@ -78,6 +95,10 @@
                 .svg
                 .axis()
                 .scale(yScale)
+                .tickFormat(settings.yAxisFormat)
+                .innerTickSize(-plotWidth)
+                .outerTickSize(0)
+                .tickPadding(10)
                 .orient("left");
 
             // Prepare the line drawer:
@@ -193,11 +214,9 @@
     };
 
     // Protective wrapper for the plugin:
-    $.fn[pluginName] = function ( options ) {
+    $.fn[pluginName] = function (options) {
         return this.each(function() {
-            if ( !$.data( this, "plugin_" + pluginName ) ) {
-                $.data( this, "plugin_" + pluginName, new Plugin( this, options ) );
-            }
+            $.data(this, "plugin_" + pluginName, new Plugin(this, options));
         });
     };
 
