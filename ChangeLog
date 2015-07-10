@@ -1,0 +1,12 @@
+VERS: 2015-07-10 ------- release/0.0.1
+
+    * 2015-07-10 b904e7d Version bumped to 0.0.1 (vst@vsthost.com)
+    * 2015-03-15 881b24e Added grid lines (vst@vsthost.com)
+    * 2014-12-19 238fa52 Disable protection for consecutive invocations (vst@vsthost.com)
+    * 2014-12-19 6e8e9ab semaphoreapp build badges added (vst@vsthost.com)
+    * 2014-12-18 10f7c96 Added a short README file (vst@vsthost.com)
+    * 2014-12-18 e7d4206 Added travis configuration (vst@vsthost.com)
+    * 2014-12-18 dd824a3 x-axis and y-axis value formatters added (vst@vsthost.com)
+    * 2014-12-10 62c5d8c [Fix] Demo works now (vst@vsthost.com)
+    * 2014-12-10 37a8b44 Development version bumped to 0.0.1dev (vst@vsthost.com)
+    * 2014-12-10 7a9fd8c Initial code commit (vst@vsthost.com)
